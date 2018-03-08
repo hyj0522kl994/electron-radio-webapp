@@ -22,7 +22,7 @@ export default class Replay_list extends React.Component {
   }
 
   handleClick(e){
-    this.setState({posterimage:e.target.name});
+    this.setState({posterimage:e.target.value});
     if (e.target.id != ''){
       axios.get(url+"?mediaurl="+e.target.id)
        .then(response => this.setState({play_url:response.data}));
@@ -37,14 +37,15 @@ export default class Replay_list extends React.Component {
       <div >
         <Link to={`/replay_list/${datas.title}`} style={LINK_STYLE}>
           <div className="media-body">
-            {this.state.play_url !='' ? <Details play_url={this.state.play_url} posterimage={this.state.posterimage}/>:null}
             <ul className="list-group" >
+              {this.state.play_url !='' ? <Details play_url={this.state.play_url} posterimage={this.state.posterimage} />:null}
               {datas.map((lists,i) =>
-              <li key={i} onClick={this.handleClick} id={lists.play_url[0].media_url} name={lists.image_w} className="list-group-item" >
+              <li key={i} className="list-group-item" >
                <div className="media-body">
                 <p>{lists.program_date}</p>
                 <strong>{lists.title}</strong>
                 <p>{lists.description}</p>
+                <button value={lists.image_w} id={lists.play_url[0].media_url} onClick={this.handleClick}> 듣기 </button>
                </div>
               </li>
               )}

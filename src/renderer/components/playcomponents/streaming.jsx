@@ -21,7 +21,7 @@ export default class Streaming extends React.Component {
   }
 
   render() {
-    console.log(this.state.addre);
+
     return (
       <div>
         <Player ref="player" poster={this.props.posterimage}>

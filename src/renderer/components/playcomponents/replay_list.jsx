@@ -4,7 +4,6 @@ import axios from 'axios';
 import Navi from "../../nav/nav";
 import Replay_file from "./replay_file";
 import ChNavi from "./channel_navi";
-import Replay_file from "./replay_file";
 
 let url='http://192.168.10.179/replay_list.php';
 let programurl='http://192.168.10.179/replay_file.php';
@@ -16,7 +15,6 @@ export default class Replay_list extends Component {
       program_list:[],
       datas:[],
       value: '21',
-      posterimage:'',
       options: [
         {
           name: '1라디오',
@@ -65,7 +63,7 @@ export default class Replay_list extends Component {
   }
 
   render() {
-    console.log(this.state.posterimage);
+
     const createItem = (item, key) =>
      <option
        key={key}
@@ -94,8 +92,9 @@ export default class Replay_list extends Component {
                 </li>
             )}
             </ul>
+
         </div>
-        {this.state.datas !='' ?<div className="pane"><Replay_file datas={this.state.datas}  /></div>:null}
+        {this.state.datas !='' ?<div className="pane"><Replay_file datas={this.state.datas} /></div>:null}
       </div>
     );
   }
