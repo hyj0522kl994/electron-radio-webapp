@@ -3,7 +3,6 @@ import { Link,hashHistory } from "react-router";
 import axios from 'axios';
 import Navi from "../../nav/nav";
 import Replay_file from "./replay_file";
-import ChNavi from "./channel_navi";
 
 let url='http://192.168.10.179/replay_list.php';
 let programurl='http://192.168.10.179/replay_file.php';

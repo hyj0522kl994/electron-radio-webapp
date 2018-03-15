@@ -34,8 +34,7 @@ const appRouting=(
         <Route path =":roomId" component={Room} />
       </Route>
       <Route path ="replay_list" component={Replay_list} >
-        <Route path =":programId" component={Replay_file} >
-        </Route>
+        <Route path =":programId" component={Replay_file} />
       </Route>
       <Route path ="schedule" component={Schedule} />
       <Route path ="frequency" component={Frequency} />

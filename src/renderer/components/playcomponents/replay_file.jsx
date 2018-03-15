@@ -43,10 +43,10 @@ export default class Replay_list extends React.Component {
               <li key={i} className="list-group-item" >
                <div className="media-body">
                 <p>{lists.program_date}</p>
-                <strong>{lists.title}</strong>
+                {lists.title !='' ? <strong>{lists.title}</strong>: null}
                 <p>{lists.description}</p>
                 <button value={lists.image_w} id={lists.play_url[0].media_url} onClick={this.handleClick}> 듣기 </button>
-               </div>
+                </div>
               </li>
               )}
             </ul>

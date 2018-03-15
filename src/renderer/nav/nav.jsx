@@ -36,7 +36,7 @@ export default function Navi() {
             <span className="icon icon-cog"/>
             설정
           </span>
-        <h1 className="nav-group-title">Chat List</h1>
+        
       </nav>
   );
 }
