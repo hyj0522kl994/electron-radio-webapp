@@ -25,7 +25,6 @@ module.exports = {
     "renderer/app": "./src/renderer/app.jsx"
   },
   output: {
-    filename: ".tmp/[name].js"
-  },
-  devtool: "source-map"
+    filename: "dist/js/[name].js"
+  }
 };

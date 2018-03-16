@@ -1,0 +1,8 @@
+{
+  "name": "KBS_Radio_Kong",
+  "productName": "KBS Kong",
+  "version": "1.0.0",
+  "main": "./js/main/index.js",
+  "description": "PC Kong radio application",
+  "author": "Yoojin Ha"
+}
