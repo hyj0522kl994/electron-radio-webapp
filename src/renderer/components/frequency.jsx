@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { Link,hashHistory } from "react-router";
 import axios from 'axios';
 import Navi from "../nav/nav";
+import config from "../config";
 
-let url='http://192.168.10.179/frequency.php';
-
+let url=config.urlFrequency;
 
 const Back_Style = {
   backgroundColor: 'gray',

@@ -3,9 +3,10 @@ import { Link,hashHistory } from "react-router";
 import axios from 'axios';
 import Navi from "../../nav/nav";
 import Replay_file from "./replay_file";
+import config from "../../config";
 
-let url='http://192.168.10.179/replay_list.php';
-let programurl='http://192.168.10.179/replay_file.php';
+let url=config.urlReplayList;
+let programurl=config.urlReplayFile;
 
 export default class Replay_list extends Component {
   constructor(props){
@@ -38,28 +39,33 @@ export default class Replay_list extends Component {
       ],
     }
     this.getprogramID(this.state.value);
+    this.handleOnClick=this.handleOnClick.bind(this);
     this.handleClick=this.handleClick.bind(this);
   }
 
-
-
   getprogramID(a){
       this.setState({value:a});
-      axios.get(url+"?channel_code="+a)
-       .then(response => this.setState({program_list:response.data.data}));
-
+      if(a != ''){
+        axios.get(url+"?channel_code="+a)
+         .then(response => this.setState({program_list:response.data.data}));
+      }
   }
 
   getUrl(a){
-      axios.get(programurl+"?program_code="+a)
-          .then(response => this.setState({datas:response.data.data}));
-
+      if(a != ''){
+        axios.get(programurl+"?program_code="+a)
+            .then(response => this.setState({datas:response.data.data}));
+      }
   }
 
+  handleOnClick(e){
+    this.getprogramID(e.target.value);
+  }
 
   handleClick(e){
     this.getUrl(e.target.id);
   }
+
 
   render() {
 
@@ -76,7 +82,7 @@ export default class Replay_list extends Component {
         <div className="pane">
 
         <select
-          onChange={event => this.getprogramID(event.target.value)}
+          onChange={this.handleOnClick}
           value={this.state.value}>
           {this.state.options.map(createItem)}
         </select>

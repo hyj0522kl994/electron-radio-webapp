@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { Link,hashHistory } from "react-router";
 import axios from 'axios';
 import Details from './details';
+import config from "../../config";
 
-let url='http://192.168.10.179/replaycdn.php';
+let url=config.urlReplayCDN;
 
 const LINK_STYLE = {
   color: "inherit",

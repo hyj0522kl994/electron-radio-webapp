@@ -3,10 +3,11 @@ import { Link,hashHistory } from "react-router";
 import axios from 'axios';
 import Streaming from './streaming';
 import Rooms from '../../rooms';
+import config from "../../config";
 
-let url='http://192.168.10.179/live.php';
-let mediaurl='http://192.168.10.179/streaming.php';
-let finalmediaurl='http://192.168.10.179/livecdn.php';
+let url=config.urlLive;
+let mediaurl=config.urlStreaming;
+let finalmediaurl=config.urlLiveCDN;
 
 export default class Live extends React.Component {
   constructor(props){

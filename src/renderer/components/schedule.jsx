@@ -5,8 +5,9 @@ import Navi from "../nav/nav";
 import DayPickerInput from 'react-day-picker/DayPickerInput';
 import 'react-day-picker/lib/style.css';
 import moment from 'moment';
+import config from "../config";
 
-let url='http://192.168.10.179/schedule.php';
+let url=config.urlSchedule;
 
 const calendar_style = {
 
