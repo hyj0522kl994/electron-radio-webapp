@@ -1,5 +1,5 @@
 {
-  "name": "KBS_Radio_Kong",
+  "name": "kbs_radio_kong",
   "version": "1.0.0",
   "description": "PC Kong radio application",
   "main": "dist/js/main/index.js",
