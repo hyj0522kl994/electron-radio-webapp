@@ -1,7 +1,18 @@
-# electron-radio-webapp
-radio-webapp made by electron 
+# Electron-radio-webapp
+This file contained webapp executing by electron with node js and react etc.  
+The babel file is needed, follow the instruction below to make exe file. 
+There are databases provided from KBS, the only permitted PC can access this data. 
+* only for non-commercial purpose (Education). 
 
-# how to run file
+# Used resources
+1. Electron
+2. Node js, react js (hls js, react-video ..)
+3. css, photon css
+4. babel, webpack
+5. html
+6. firebase real time database storage 
+
+# How to run file
 
 1. copy code command-> git clone https://github.com/hyj0522kl994/electron-radio-webapp.git
 
@@ -19,6 +30,6 @@ radio-webapp made by electron
 
 # how to make execute file 
 
-1. making cross-platform execute file command-> npm run package
+1. making cross-platform file command-> npm run package
 
 2. click appropriate file
